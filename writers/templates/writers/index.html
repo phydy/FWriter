@@ -52,9 +52,12 @@
         <li class="sidebar-nav-item">
           <a class="js-scroll-trigger" href="{% url 'o-canceled' %}">Summary</a>
         </li>
-
+        <li class="sidebar-nav-item">
+          <a class="js-scroll-trigger" href="{% url 'logout' %}">Logout</a>
+        </li>
+      </ul>
     {% else %}
-      <ul class="sidebar-nav">
+      <ul class="sidebar-nav"></ul>
         <li class="sidebar-brand">
           <a class="js-scroll-trigger" href="#page-top"></a>
         </li>
@@ -79,21 +82,14 @@
 
   <!-- Header -->
   <header class="masthead d-flex">
-    <div class="container-fluid" data-aos="zoom-out" data-aos-delay="100">
-      <div class="row justify-content-center">
-        <div class="col-xl-10">
-          <div class="row">
-            <div class="col-xl-5">
-              <h2 class="" >Take Your Academic Projects To The Next Level</h1>
-              <h3>Our Writers Will Handle All Your Needs in Your Papers and Deliver Quality Work</h2>
-              <button> 
-                <a href="{% url 'login' %}" class="btn-get-started scrollto">Get Started</a>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="container text-center my-auto">
+      <h1 class="mb-1">WriteIt</h1>
+      <h3 class="mb-5">
+        <em>Whatever Your Need, We Write it</em>
+      </h3>
+      <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a>
     </div>
+    <div class="overlay"></div>
   </header>
 
   <!-- About -->
@@ -106,6 +102,7 @@
             WriteIt is the best online Writing company around, boasting of many satisfied clients and
              quality writers, working around the clock to ensure we are available for you regardless
               of the time of the day.
+          </p>
           <a class="btn btn-dark btn-xl js-scroll-trigger" href="#services">What We Offer</a>
         </div>
       </div>
@@ -272,7 +269,7 @@
             </p>
           </div>
           <div class="col-lg-6 order-1 order-lg-2 text-center" data-aos="fade-up" data-aos-delay="200">
-            <img src="{% static 'writers/assets/img/tabs-1.jpg' %}" alt="" class="img-fluid">
+            <img src="" alt="" class="img-fluid">
           </div>
         </div>
       </div>
@@ -291,7 +288,7 @@
             </ul>
           </div>
           <div class="col-lg-6 order-1 order-lg-2 text-center">
-            <img src="{% static 'writers/assets/img/tabs-2.jpg' %}" alt="" class="img-fluid">
+            <img src="" alt="" class="img-fluid">
           </div>
         </div>
       </div>

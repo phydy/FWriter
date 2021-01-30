@@ -12,7 +12,7 @@ SECRET_KEY = 'ykagvfq5$j#le@effk)^jab##q1z$uyi$4*!_g3uopr!unp@b_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['139.162.245.142', 'www.writeit.biz']
 
 
 # Application definition
@@ -108,7 +108,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIR = [os.path.join(BASE_DIR, "static")]
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media_cdn")
