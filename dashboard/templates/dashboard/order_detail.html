@@ -1,0 +1,22 @@
+{% extends "dashboard/index.html" %}
+{% block content %}
+
+<div class="row">
+                <article class="media content-section">
+                    <div class="media-body">
+                        <div class="article-metadata">
+                            <a class="mr-2" href="#">{{object.duration}}</a>
+                        </div>
+                        <div>
+                            <small class="text-muted">{{object.date_posted}}</small>
+                        </div>
+                        <h2 class="text-muted">{{object.title}}</a></h2>
+                        <p class="article-content">{{object.content}}</p> 
+                        <a href="{{object.order_file.url}}" download="{{object.order_file.url}}">Download</a>
+                        <div>
+                            <a href="{% url 'd-submit' %}" submit="{% url 'd-submit' %}">Submit</a>   
+                        </div> 
+                    </div>
+                </article>
+</div>
+{% endblock content %}
