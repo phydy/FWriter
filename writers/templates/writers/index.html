@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,8 +11,8 @@
 
   <title>Writeit</title>
 
-  <link href="{% static 'writers/assets/img/favicon.png' %}" rel="icon">
-  <link href="{% static 'writers/assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+  <link href="{% static 'writers/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'writers/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
 
   <!-- Bootstrap Core CSS -->
   <link href="{% static 'writers/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
@@ -40,16 +41,16 @@
           <a class="js-scroll-trigger" href="#page-top"></a>
         </li>
         <li class="sidebar-nav-item">
-          <a class="js-scroll-trigger" href="{% url'd-home' %}">Profile</a>
+          <a class="js-scroll-trigger" href="{% url 'profile' %}">Profile</a>
         </li>
         <li class="sidebar-nav-item">
-          <a class="js-scroll-trigger" href="{% url'd-dash' %}">Available</a>
+          <a class="js-scroll-trigger" href="{% url 'd-dash' %}">Available</a>
         </li>
         <li class="sidebar-nav-item">
-          <a class="js-scroll-trigger" href="{% url'o-completed' %}"></a>Finances
+          <a class="js-scroll-trigger" href="{% url 'o-completed' %}">Finances</a>
         </li>
         <li class="sidebar-nav-item">
-          <a class="js-scroll-trigger" href="{% url'o-canceled' %}">Summary</a>
+          <a class="js-scroll-trigger" href="{% url 'o-canceled' %}">Summary</a>
         </li>
 
     {% else %}
@@ -58,16 +59,19 @@
           <a class="js-scroll-trigger" href="#page-top"></a>
         </li>
         <li class="sidebar-nav-item">
-          <a class="js-scroll-trigger" href="{% url'd-home' %}">Home</a>
+          <a class="js-scroll-trigger" href="{% url 'd-home' %}">Home</a>
         </li>
         <li class="sidebar-nav-item">
-          <a class="js-scroll-trigger" href="{% url'd-home' %}">About</a>
+          <a class="js-scroll-trigger" href="{% url 'd-home' %}">About</a>
         </li>
         <li class="sidebar-nav-item">
-          <a class="js-scroll-trigger" href="{% url'd-home' %}">Services</a>
+          <a class="js-scroll-trigger" href="{% url 'd-home' %}">Services</a>
         </li>
         <li class="sidebar-nav-item">
-          <a class="js-scroll-trigger" href="{% url'd-home' %}">Contact</a>
+          <a class="js-scroll-trigger" href="{% url 'd-home' %}">Contact</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="js-scroll-trigger" href="{% url 'login' %}">Login</a>
         </li>
       </ul>
     {% endif %}
@@ -80,8 +84,8 @@
         <div class="col-xl-10">
           <div class="row">
             <div class="col-xl-5">
-              <h1>Take Your Academic Projects To The Next Level</h1>
-              <h2>Our Writers Will Handle All Your Needs in Your Papers and Deliver Quality Work</h2>
+              <h2 class="" >Take Your Academic Projects To The Next Level</h1>
+              <h3>Our Writers Will Handle All Your Needs in Your Papers and Deliver Quality Work</h2>
               <a href="#about" class="btn-get-started scrollto">Get Started</a>
             </div>
           </div>
@@ -171,6 +175,128 @@
     </div>
   </section>
 
+  <section id="areas" class="areas section-bg ">
+    <div class="container" data-aos="fade-up">
+
+      <div class="section-title">
+        <h2>The Fields we cover</h2>
+        <p>We Provide a range of services in the writting field.</p>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+            <i class="icofont-computer"></i>
+            <h4><a href="#">Computer Science and Technology</a></h4>
+            <p>We have experienced writers in the field of computer science and technology to cover all your assignment as required.</p>
+          </div>
+        </div>
+        <div class="col-md-6 mt-4 mt-md-0">
+          <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+            <i class="icofont-chart-bar-graph"></i>
+            <h4><a href="#">Business and Economics</a></h4>
+            <p>Our writer in these fields are qualified with degree from respective fields and atleast three years experince of writing on matters concerning business.</p>
+          </div>
+        </div>
+        <div class="col-md-6 mt-4 mt-md-0">
+          <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
+            <i class="icofont-image"></i>
+            <h4><a href="#">Performing Arts</a></h4>
+            <p>We provide excelent reviews and essays in the performing arts with our writers being we versed in the field from the experienced they have gathered over the years.</p>
+          </div>
+        </div>
+        <div class="col-md-6 mt-4 mt-md-0">
+          <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
+            <i class="icofont-settings"></i>
+            <h4><a href="#">Medicine and Biology</a></h4>
+            <p>In the biological sciences, you may find trouble writing critical essays, desrtations, literature reviews, and other assignments. Here you can ask our writers to assist you with any paper.              </p>
+          </div>
+        </div>
+        <div class="col-md-6 mt-4 mt-md-0">
+          <div class="icon-box" data-aos="fade-up" data-aos-delay="500">
+            <i class="icofont-earth"></i>
+            <h4><a href="#">History and Law</a></h4>
+            <p>Don't have time to peruse through the numerous books on your history and law project? Give us the chance to make everything easy for you with an original paper that will knock your socks off!</p>
+          </div>
+        </div>
+        <div class="col-md-6 mt-4 mt-md-0">
+          <div class="icon-box" data-aos="fade-up" data-aos-delay="600">
+            <i class="icofont-tasks-alt"></i>
+            <h4><a href="#">Literature</a></h4>
+            <p>Don't give yourself a headache trying to correct grammar or read dozens of novels to complete your literature essay. Delate that to us and we will make it worth your while.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+<section id="tabs" class="tabs">
+  <div class="container" data-aos="fade-up">
+
+    <ul class="nav nav-tabs row d-flex">
+      <li class="nav-item col-3">
+        <a class="nav-link active show" data-toggle="tab" href="#tab-1">
+          <i class="ri-gps-line"></i>
+          <h4 class="d-none d-lg-block">Unlimited revisions</h4>
+        </a>
+      </li>
+      <li class="nav-item col-3">
+        <a class="nav-link" data-toggle="tab" href="#tab-2">
+          <i class="ri-body-scan-line"></i>
+          <h4 class="d-none d-lg-block">Follow up on your work</h4>
+        </a>
+      </li>
+
+    <div class="tab-content">
+      <div class="tab-pane active show" id="tab-1">
+        <div class="row">
+          <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0" data-aos="fade-up" data-aos-delay="100">
+            <h3>Earn the marks you deserve with our well written essays!</h3>
+            <p class="font-italic">
+              Our essays are well written and structured in a formatting f your choice by our eficient writters. We ensure 
+              all the work submitted to you is unplagiarized with our powerfull tools that promise you original work to give to
+              your supervisor or lecturer.
+            </p>
+            <ul>
+              <li><i class="ri-check-double-line"></i> Follow up on the progress of your work to ensure our writer is doing the right thing.</li>
+              <li><i class="ri-check-double-line"></i> Get value for your money.</li>
+              <li><i class="ri-check-double-line"></i> Get unlimited revisions on submitted work free of charge.</li>
+            </ul>
+            <p>
+              Depending on your engagements, you can choose to be involved with  your project as we write it. We provide 
+              a chatting system that enables you to keep tabs on the writer doing your work. In any case you feel the writer is
+               not qualified enough to handle the paper, you can request for another writerand we will be happy to abide.
+            </p>
+          </div>
+          <div class="col-lg-6 order-1 order-lg-2 text-center" data-aos="fade-up" data-aos-delay="200">
+            <img src="{% static 'writers/assets/img/tabs-1.jpg' %}" alt="" class="img-fluid">
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane" id="tab-2">
+        <div class="row">
+          <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+            <h3>Our Prices are Dynamic</h3>
+            <p>
+              We are the most affordable writting service out there and we also offer our writers good returns. Some of our senior writers earn as much as $10 per page.
+            </p>
+            <ul>
+              <li><i class="ri-check-double-line"></i> Send us the work you want to be handled via email.</li>
+              <li><i class="ri-check-double-line"></i> Wait for credentials to sign in to our website.</li>
+              <li><i class="ri-check-double-line"></i> Fill in your full information on our website.</li>
+              <li><i class="ri-check-double-line"></i> Enjoy the services we have to offer.</li>
+            </ul>
+          </div>
+          <div class="col-lg-6 order-1 order-lg-2 text-center">
+            <img src="{% static 'writers/assets/img/tabs-2.jpg' %}" alt="" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section><!-- End Tabs Section -->
 
   <section class="content-section bg-primary text-white">
     <div class="container text-center">
@@ -179,7 +305,6 @@
       <a href="#!" class="btn btn-xl btn-dark">As a Client</a>
     </div>
   </section>
-
   <!-- Footer -->
   <footer class="footer text-center">
     <div class="container">

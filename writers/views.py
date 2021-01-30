@@ -8,7 +8,7 @@ from django.views.generic import CreateView
 
 # Create your views here.
 def home(request):
-    return render(request, 'writers/home.html')
+    return render(request, 'writers/index.html')
 
 '''
 class ClientSignUpView(CreateView):
