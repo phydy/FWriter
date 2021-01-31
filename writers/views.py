@@ -56,3 +56,7 @@ def register(request):
 @login_required
 def profile(request):
 	return render(request, 'writers/profile.html')
+
+@login_required
+def terms(request):
+	return render(request, 'writers/terms.html')

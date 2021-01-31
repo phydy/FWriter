@@ -29,6 +29,7 @@ urlpatterns = [
     path('', writer_views.home, name = 'd-home'),
     path('register/', writer_views.register, name='register'),
     path('profile/', writer_views.profile, name='profile'),
+    path('terms/', writer_views.terms, name='terms'),
     path('login/', auth_views.LoginView.as_view(template_name='writers/login.html'), name='login'),
     path('logout/', auth_views.LogoutView.as_view(template_name='writers/logout.html'), name='logout'),
     path('dashboard/', include('dashboard.urls')),
