@@ -10,7 +10,7 @@ from django.views.generic import CreateView
 def home(request):
     return render(request, 'writers/index.html')
 
-'''
+
 class ClientSignUpView(CreateView):
     model = User
     form_class = ClientSignUpForm
@@ -38,7 +38,7 @@ class WriterCreate(CreateView):
         user = form.save()
         login(self.request, user)
         return redirect('login')
-'''
+
 def register(request):
 	if request.method == 'POST':
 		form = UserRegisterForm(request.POST)

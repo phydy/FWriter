@@ -1,0 +1,22 @@
+{% extends "dashboard/index.html" %}
+{% block content %}
+
+<div class="row">
+            {% for order in orders %}
+    <article class="media content-section">
+        <div class="media-body">
+            <div class="article-metadata">
+                <a class="mr-2" href="#">{{order.duration}}</a>
+            </div>
+            <div>
+                <small class="text-muted">{{order.date_posted}}</small>
+            </div>
+            <h2><a class="article-title" href="{% url 'order-detail' order.id %}">{{order.title}}</a></h2>
+        </div>
+
+    </article>
+</div>
+
+        
+    {% endfor %}
+{% endblock content %}

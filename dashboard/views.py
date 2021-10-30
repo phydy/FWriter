@@ -14,7 +14,16 @@ from .forms import OrderForm, AssignmentForm
 @login_required
 def dash(request):
     context = {'orders': Order.objects.filter(Q(user_to=request.user)).order_by('-date_posted')}
-    return render(request, 'dashboard/home.html', context)
+    return render(request, 'dashboard/home.html', context) 
+
+class PatnerListView(LoginRequiredMixin, ListView):
+    model = Order
+    template_name = 'dashboard/panter.html'
+    context_object_name = 'orders'
+
+    def get_queryset(self):
+        orders = Order.objects.all().order_by('-date_posted')
+        return orders
 
 
 #@method_decorator(writer_required, name='dispatch')
